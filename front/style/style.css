@@ -1,0 +1,246 @@
+/* Generic elements */
+body{
+    width: 100%;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    overflow-x: hidden;
+}
+
+h1{
+    color: white;
+    background-color: #202020;
+    padding: 0 0.5rem;
+    font-variant: small-caps;
+    font-weight: 900;
+    word-break: break-all;
+}
+
+h2{
+    margin-bottom: 0.1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #ff0040;
+}
+
+h1 a{
+    color: white;
+}
+
+main{
+    margin: 6rem 0 3rem 0;
+}
+
+article p{
+    padding: 0 1rem;
+}
+
+.article-placeholder{
+    color: #808080;
+    font-style: italic;
+}
+
+section{
+    margin: 2rem auto;
+    max-width: 640px;
+}
+
+header,
+footer{
+    text-align: center;
+}
+
+footer{
+    color: #808080;
+    font-style: italic;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+
+
+/* Buttons */
+button,
+input[type=submit]{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+}
+
+.button-link{
+    padding: 0.5rem 0.5rem;
+}
+
+.button-primary{
+    color: white;
+    background-color: #ff0040;
+}
+
+button a{
+    padding: inherit;
+    margin: 0;
+    color: black;
+}
+
+.button-primary a{
+    color: white;
+}
+
+button:hover,
+input[type=submit]:hover{
+    background-color: #ff8080;
+    cursor: pointer;
+}
+
+button:focus{
+    background-color: #ff8080;
+}
+
+
+
+/* Navigation */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    box-shadow: 0em -1em 1em 1em #000020;
+}
+
+nav .nav-content{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content div{
+    display: flex;
+    align-items: center;
+}
+
+.nav-group-left>*{
+    margin-right: 0.5rem;
+}
+
+.nav-group-right>*{
+    margin-left: 0.5rem;
+}
+
+nav img{
+    height: 2rem;
+}
+
+nav h1{
+    visibility: hidden;
+    font-size: large;
+}
+
+@media only screen and (min-width: 425px) {
+    nav h1{
+        visibility: visible;
+    }
+}
+
+
+
+/* Homepage */
+article{
+    min-height: 10rem;
+}
+
+article h1{
+    margin-top: 0;
+}
+
+#article-1{
+    grid-column-start: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    #article-1{
+        grid-column-start: span 2;
+    }
+}
+
+
+
+/* Viewing articles */
+header span{
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+header h1{
+    margin: 0;
+}
+
+header h1 a{
+    color: white;
+}
+
+.article-edit {
+    text-align: center;
+}
+
+
+
+/* Editing articles */
+input[type=text],
+input[type=email],
+input[type=password],
+textarea{
+    box-sizing: border-box;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    background-color: #202020;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    font-family: inherit;
+}
+
+.form-group h2{
+    grid-column-start: span 2;
+}
+
+.form-element-wide{
+    grid-column-start: span 2;
+}
+
+.form-group button{
+    justify-self: start;
+}
+
+.form-buttons{
+    text-align: right;
+}
+
+.form-status{
+    font-weight: 900;
+    grid-column-start: 2;
+    justify-self: end;
+}
+
+.status-bad{
+    color: #ff0040;
+}
+
+.status-good{
+    color: #00e040;
+}

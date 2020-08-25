@@ -1,0 +1,37 @@
+.wrapper{
+    height: inherit;
+    max-width: 960px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.document-wrapper{
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.homepage-grid{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-row-gap: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .homepage-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+    }
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+}
