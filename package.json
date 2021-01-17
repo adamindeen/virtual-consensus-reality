@@ -4,8 +4,8 @@
   "description": "Course project for Web II at EhB. A user-generated newspaper using twitter trends as headlines.",
   "main": "index.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node back/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node back/index.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
     "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
