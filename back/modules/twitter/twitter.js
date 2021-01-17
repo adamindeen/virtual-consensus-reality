@@ -29,6 +29,7 @@ exports.getTrends = (callback) => {
             id: result[0].woeid
         };
 
+		console.log(result[0]);
         trendsPlace();
     });
 
