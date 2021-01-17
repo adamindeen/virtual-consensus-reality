@@ -4,31 +4,28 @@ let trends = null;
 
 // Requirements
 const
-twitter = require("twitter"),
-config = require("./config.json"),
-client = new twitter(config),
-// Error checking
-assert = require('assert');
+	locations = require("./locations.json"),
+	twitter = require("twitter"),
+	config = require("./config.json"),
+	client = new twitter(config),
+	// Error checking
+	assert = require('assert');
 
-//Setup
-// Define the location for nearby trends (Brussels)
-const location = {
-    lat: 50.85045,
-    long: 4.34878
-}
-
+// Define the location for nearby trends (Edinburgh)
+const coordinates = locations.edinburgh;
 let woe = {};
 
 // Get & return trends in given location
 exports.getTrends = (callback) => {
 
     // Get the appropriate WOEID (Yahoo! Where On Earth ID) to pass to Twitter
-    client.get("trends/closest", location, (err, result) => {
+    client.get("trends/closest", coordinates, (err, result) => {
 
         woe = {
             id: result[0].woeid
         };
 
+		console.log(result[0]);
         trendsPlace();
     });
 

@@ -12,11 +12,11 @@ const
     assert = require('assert');
 
 // Authenticate & create a client
-const {username, password, host, mongoPort} = config,
-    url = `mongodb://${username}:${password}@${host}:${mongoPort}/?authMechanism=DEFAULT&authSource=${username}`,
+const {username, password, host, dbname} = config,
+    url = `mongodb+srv://${username}:${password}@${host}/${dbname}/?retryWrites=true&w=majority`,
     client = new mongoClient(url, {useUnifiedTopology: true});
 
-//Exported methods
+// Exported methods
 // Connect to the database
 exports.connect = (callback) => {
     client.connect((err) => {
